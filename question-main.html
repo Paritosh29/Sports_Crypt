@@ -1,203 +1,99 @@
-#rotate-prompt{
-  display: none;
-  visibility: hidden;
-    width:75%;
-    margin-top:40%;
-    margin-left: 14%;
-    color:white;
-    text-align: center;
-}
-#rotate-prompt img{
-  margin-left:-10%;
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SportsCrypt</title>
+    <link rel="stylesheet" href="css/question-main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-.container-self p{
-  font-family: "Caribbean Regular";
-}
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" language="JavaScript">
 
-#container{
-  max-width:100%;
-}
-#background-image{
-  z-index: 2;
-  background-size: cover;
-  margin-top:-1.5%;
-  width:100%;
-  height:104vh;
-}
-#map{
-  top:6%;
-  position:absolute;
-  z-index: 100;
-}
-#map-close{
-  z-index:200;
-  position: absolute;
-  opacity: 0;
-  width: 9%;
-  height: 8%;
-  top:20%;
-  left:71%;
-  cursor: pointer;
-}
-.btn{
-  position: absolute;
-  z-index: 150;
-  opacity: 0;
-  width: 19%;
-  height: 10%;
-  cursor: pointer;
-}
-
-.btn-map{
-  position: absolute;
-  z-index: 125;
-  opacity: 1;
-  width: 12%;
-  height: 14%;
-  cursor: pointer;
-  top:6%;
-  left:84%;
-  opacity:0;
-}
-#character{
-  margin-left: 3%;
-  width:10%;
-  margin-top:-24%;
-  position: absolute;
-  z-index:50;
-}
-#my-crew{
-  top:49%;
-  left: 76%;
-}
-#sign-out{
-  top:72%;
-  left: 76%;
-}
-#next{
-  position: absolute;
-  z-index: 20;
-  opacity: 1;
-  width: 19%;
-  height: 8%;
-  top:69%;
-  left:34%;
-  cursor: pointer;
-  background-color: #e8d295;
-  border: 3px solid #a65733;
-  font-family: sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color:#361709;
-}
-.container{
-  position: relative;
-}
-#dialogue{
-  width: 70%;
-  margin-left: 7%;
-  margin-top:-45.5%;
-  z-index: 12;
-  position: absolute;
-  }
-#dialogue-text{
-  font-family: "Caribbean Regular";
-  left:17%;
-  animation-delay: 8s
-  animation: textslide 1s;
-  animation-fill-mode: forwards;
-  z-index:70;
-  position: absolute;
-  width:55%;
-  /* margin-left: 17%;  */
-  margin-top:-37%;
-  color: white;
-}
-
-.map-animation{
-  animation: mapmove 2s;
-  animation-fill-mode: forwards;
-}
-.map-animation-2{
-  animation: mapmove-2 2s ease-out;
-  animation-fill-mode: forwards ;
-}
-.box-animation{
-  animation: box-appear 1s ease-out;
-}
-@keyframes textslide{
- 0%   {
- transform: translateX(0%);
- }
- 100% {
- transform: translateX(31%);
- }
-}
-
-@keyframes mapmove{
-  0% {
-  transform: translate(0%,0%) scale(1);
-  }
-  100%{
-  transform:translate(40%,-42%) scale(0.21);;
-  }
-}
-
-@keyframes mapmove-2{
-  0% {
-  transform: translate(40%,-42%) scale(0.21);
-  }
-  100%{
-  transform:translate(0%,0%) scale(1);;
-  }
-}
-@keyframes box-appear{
-  0%{
-    transform: translate(-40%,20%) scale(0);
-  }
-  100%{
-    transform: translate(0%,0.5%) scale(1);
-  }
-}
-@keyframes character-appear{
-  0%{
-    transform: translateX(0%);
+    function set_body_height() { // set body height = window height
+      $('body').height($(window).height());
     }
-  100%{
-    transform: translate(20%);
-  }
-  }
-@media (max-width: 800px){
-  .container{
-    font-size: 14px;
-  }
-  #next{
-    top:72%;
-  }
-}
-@media (max-width: 700px){
-  .container{
-    font-size: 12px;
-  }
-}
-@media (max-width: 600px){
-  .container{
-    font-size: 11px;
-  }
-}
+    $(document).ready(function() {
+        $(window).bind('resize', set_body_height);
+        set_body_height();
+  });
 
-@media (orientation:portrait) {
-    .container {
-        display: none;
+
+  function reset_animation() {
+    var el = document.getElementById('map');
+    el.style.animation = 'none';
+    el.offsetHeight; /* trigger reflow */
+    el.style.animation = null;
+  }
+
+  $(function(){
+    $('#map-button').on('click',function(){
+      $('#map').addClass('map-animation-2');
+      $('#map').removeClass('map-animation')
+    });
+  });
+
+
+  $(function(){
+    var bool= 0;
+    $('#map-close').on('click',function(){
+      $('#map').addClass('map-animation');
+      $('#map').removeClass('map-animation-2');
+      if(bool==0){
+      $('#character').hide(0).delay(1000).fadeIn(1500);
+      $('#dialogue').hide(0).delay(2500).show(0);
+      $('#dialogue').addClass('box-animation');
+      $('#dialogue-text').hide(0).delay(3000).fadeIn(4000);
+      $('#next').hide().delay(5000).fadeIn(1000);
     }
-    #rotate-prompt{
-      display: block;
-      visibility: visible;
+    bool=1;
+    });
+  });
+
+</script>
+
+    <style>
+    *{
+      padding:0;
+      margin:0;
     }
-    body{
-      background-attachment: fixed;
-      z-index: 50;
-      background-image: url("https://raw.githubusercontent.com/Paritosh29/Sports_Crypt/master/assets/images/black.jpg");
-    }
-}
+    .fit { /* set relative picture size */
+          max-width: 100%;
+          max-height: 100%;
+      }
+      .center {
+          display: block;
+          margin: auto;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="rotate-prompt">
+    <img src="assets/images/rotate-screen.gif">
+    Please play the game in landscape mode!
+    </div>
+
+    <div class="container">
+      <img id="background-image" class= "center fit" src="assets/images/First Background edit.jpg">
+      <div id="dialogue-cont">
+        <img id="dialogue" class="textbox" src="assets/images/Dialogue Box_Artboard 7.svg">
+      </div>
+      <img id="map" src="assets/images/Map 1.svg">
+      <img id="character" src="assets/images/Character_Artboard 7.png">
+      <div id="dialogue-text">
+        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.<br><br>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+      </div>
+      <button class="btn" id="my-crew" type="button"></button>
+      <button class="btn" id="sign-out" type="button"></button>
+
+      <button onclick="reset_animation()" class="btn-map" id="map-button" type="button"></button>
+      <button id="next" type="button">Next</button>
+
+      <button id="map-close" type="button"></button>
+    </div>
+  </body>
+</html>
