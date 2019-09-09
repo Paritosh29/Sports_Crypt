@@ -11,6 +11,8 @@ xhttp.onreadystatechange = function() {
     console.log(json);
       question = json.question;
       team_name = json.team_name;
+      document.getElementsByClassName("").innerHTML = question;
+      document.getElementsByClassName("").innerHTML = team_name;
       console.log(question,team_name);
   }
 };
