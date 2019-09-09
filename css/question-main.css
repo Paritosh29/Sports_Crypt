@@ -21,9 +21,9 @@
 #background-image{
   z-index: 2;
   background-size: cover;
-  margin-top:-3.5%;
+  margin-top:-1.5%;
   width:100%;
-  height:100vh;
+  height:104vh;
 }
 #map{
   top:6%;
@@ -97,7 +97,7 @@
 #dialogue{
   width: 70%;
   margin-left: 7%;
-  margin-top:-45%;
+  margin-top:-45.5%;
   z-index: 12;
   position: absolute;
   }
@@ -196,6 +196,7 @@
       visibility: visible;
     }
     body{
+      background-attachment: fixed;
       z-index: 50;
       background-image: url("https://raw.githubusercontent.com/Paritosh29/Sports_Crypt/master/assets/images/black.jpg");
     }
