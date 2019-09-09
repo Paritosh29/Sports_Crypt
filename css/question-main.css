@@ -16,16 +16,18 @@ body{
 
 #rotate-prompt{
   display: none;
+  flex-direction: column;
   visibility: hidden;
-  width:75%;
-  margin-top:40%;
-  margin-left: 14%;
+  width:100vw;
+  margin-top:8vh;
+  align-self: center;
   color:white;
   text-align: center;
 }
 
+
 #rotate-prompt img{
-  margin-left:-10%;
+  align-self: center;
 }
 
 #background-image{
@@ -48,7 +50,7 @@ body{
 #map-close{
   z-index:200;
   position: absolute;
-  opacity: 0.5;
+  opacity: 0;
   width: 9%;
   height: 8%;
   top:25%;
@@ -68,20 +70,18 @@ body{
 #map-button{
   position: absolute;
   z-index: 125;
-  opacity: 1;
   width: 15%;
   height: 14%;
   cursor: pointer;
   top:6%;
   left:80%;
-  opacity:0.5;
+  opacity:0 ;
 }
 
 #character{
-  margin-left: 3%;
-  width:10%;
-  top:54%;
-  left:3.5%;
+  width:15%;
+  top:90%;
+  left:-5%;
   position: absolute;
   z-index:70;
 }
@@ -102,8 +102,9 @@ body{
   opacity: 0.8;
   width: 15%;
   height: 7%;
-  bottom: 8%;
-  left:40%;
+  bottom: 4%;
+  left:35%;
+  margin-bottom: 15px;
   cursor: pointer;
   background-color: #e8d295;
   border: 3px solid #a65733;
@@ -117,7 +118,7 @@ body{
   position: absolute;
   z-index:20;
   left:10%;
-  bottom: 40%;
+  bottom: 45%;
   width:65vw;
   height:40vh;
 }
@@ -194,12 +195,17 @@ body{
   }
   }
 
+@media screen and (max-width:641px){
+  body{
+    font-size: 8px;
+  }
+}
 @media (orientation:portrait) {
     .container {
         display: none;
     }
     #rotate-prompt{
-      display: block;
+      display: flex;
       visibility: visible;
     }
     body{
