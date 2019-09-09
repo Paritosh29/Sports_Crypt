@@ -8,69 +8,64 @@
     <link rel="stylesheet" href="css/question.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
     <script>
     function Scrolldown() {
          window.scroll(0,10);
     }
 
-    window.onload = Scrolldown;
     </script>
 
 </head>
 
 <body>
 
-  <div id='scroller' style='position:absolute;height:2000px;'></div>
-
   <div id="rotate-prompt">
   <img src="assets/images/rotate-screen.gif">
   Please play the game in landscape mode!
-</div>
+  </div>
 
-<div class="container">
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+  <div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
 
       <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h3 class="modal-title">Congratulations! Your Answer is Correct!</h3>
-        </div>
-        <div class="modal-body">
-          <h4>Hint for location no. 4:-</h4>
-          <p>qwertyuiopasdfghjklzxcv bnmqwer tyu iopas dfghj klzxcvb nmqwe rtyuio pasd fghjklz xcvbnmqw erty u iopas df ghjkl<br><br>Click 'Next' on reaching the location</p>
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">Oops! Your Answer is Incorrect!</h3>
+          </div>
+          <div class="modal-body">
+            <h4>There's still hope and time left!!</h4>
+            <p>Dont't give up. Try again. <br>The treasure is yours to take!<br><br>Click 'Next' on reaching the location</p>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Next</button>
+          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Next</button>
+            </div>
+          </div>
+
         </div>
       </div>
 
     </div>
-  </div>
-
-</div>
 
   <div class="container-self">
-    <img id="bg-img" src="assets/images/First Background edit.jpg">
-
-    <img id="character" src="assets/images/Character_Artboard 7.png">
-    <img id="dialogue" src="assets/images/Dialogue Box_Artboard 7.svg">
-
-
-      <h1 id="heading"> Question No. 2</h1>
-    <div id="question">
-      What is the total number of hostels in BITS Pilanitttttttttt tttt tttttt tttt t tt tttt ttttt tttt ttttttt tt ttttt tttttt tttt t t t t   tttt ttttttt t t tttt t  ttttt tttt t t tttttttt tttt t ttt tt ttttt tiydhbi iuhou hiu jn n ijk mjihkdnc; j m mk n nl;m;n n; ;jougbu jij
+    <div id="textbox">
+        <img id="dialogue" src="assets/images/Dialogue Box_Artboard 7.svg">
+        <h1 id="heading"> Question No. 3</h1>
+        <div id="question">
+          <p>What is the total number of hostels in BITS Pilanitttttttttt tttt tttttt tttt t tt tttt ttttt tttt ttttttt tt ttttt tttttt tttt t t t t   tttt ttttttt t t tttt t  ttttt tttt t t tttttttt tttt t ttt tt ttttt tiydhbi iuhou hiu jn n ijk mjihkdnc; j m mk n nl;m;n n; ;jougbu jij</p>
+        </div>
+        <form id="answer-form" class="form-inline" action="">
+          <input type="text" id="q1" placeholder="Your Answer" name="answer">
+          <button id ="submit-button" type="button">Submit</button>
+        </form>
     </div>
+    <img id="bg-img" src="assets/images/First Background edit.jpg">
+    <img id="character" src="assets/images/Character_Artboard 7.png">
 
-    <form id="answer-form" class="form-inline" action="">
-      <input type="number" id="q1" placeholder="Your Answer" name="answer">
-      <button id ="submit-button" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Submit</button>
-
-    </form>
   </div>
   </div>
 </body>
