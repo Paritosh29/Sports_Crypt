@@ -19,7 +19,7 @@ xhttp2.onreadystatechange = function() {
       var json = JSON.parse(this.responseText);
       console.log(json);
       var pin = json.pin;
-      document.getElementById("").innerHTML = pin;
+      document.getElementsByClassName("code2").innerHTML = pin;
   }
 };
 xhttp2.send();

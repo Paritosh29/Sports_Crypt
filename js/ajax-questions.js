@@ -20,7 +20,10 @@ xhttp.onreadystatechange = function() {
 xhttp.send();
 
 function sendres() {
-    var ans = JSON.stringify(document.getElementById("").innerHTML);
+    var obj = {
+      ans : document.getElementById("").value
+    }
+    var send = JSON.stringify(obj);
     var res = new XMLHttpRequest();
     res.open("POST","url",true);
     res.setRequestHeader("Content-Type", "application/json");
@@ -28,9 +31,9 @@ function sendres() {
         if (this.readyState == 4 && this.status == 200) {      
         }
     };
-    res.send(ans);
+    res.send(send);
 }
-var check = new XMLHttpRequest();
+/*var check = new XMLHttpRequest();
 check.open("GET","url","true");
 check.setRequestHeader("Content-Type", "application/json");
 check.onreadystatechange = function() {
@@ -38,4 +41,4 @@ check.onreadystatechange = function() {
       var flag = JSON.parse(this.responseText).flag;
     }
 };
-check.send();
+check.send();*/

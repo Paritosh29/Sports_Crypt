@@ -2,7 +2,9 @@
   <head>
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="550144110348-puc1jhgg5v7d3p8l8ar4940ab0nsjb50.apps.googleusercontent.com">
+    <link rel="stylesheet" href="./css/loader.css">	
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/sign-in_ajax.js"></script>
     <style>
       body{
         background-image: url("assets/images/Background.svg");
@@ -18,9 +20,29 @@
     </style>
   </head>
   <body>
+    		<!-- Loader
+		<div class="loader">
+        <div class="flip-card ">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img s  rc="./assets/images/loader_skull.svg" alt="Avatar" style="width:40vw;height:50vh;">
+            </div>
+            <div class="flip-card-back">
+              <img src="./assets/images/bosm_logo.svg" alt="Avatar" style="width:40vw;height:50vh;">
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Rotate prompt
+		<div id="rotate-prompt">
+        <img src="./assets/images/rotate-screen.gif">
+        Please play the game in landscape mode!
+      </div>
+      
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
         <div></div>
-    </div>
+    </div> -->
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:

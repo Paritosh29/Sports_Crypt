@@ -1,3 +1,14 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 #rotate-prompt{
   display: none;
   visibility: hidden;
@@ -15,15 +26,19 @@
   font-family: "Caribbean Regular";
 }
 
-#container{
-  max-width:100%;
+.container{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
 #background-image{
   z-index: 2;
   background-size: cover;
-  margin-top:-1.5%;
+  background-position: center;
   width:100%;
-  height:104vh;
+  height:100%;
 }
 #map{
   top:6%;
@@ -91,27 +106,25 @@
   font-weight: bold;
   color:#361709;
 }
-.container{
-  position: relative;
+
+#dialogue-cont {
+  display: block;
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  left: 5vw;
+  bottom: 10vh;
 }
-#dialogue{
-  width: 70%;
-  margin-left: 7%;
-  margin-top:-45.5%;
-  z-index: 12;
+
+#dialogue-cont img {
+  width: 100%;
+  height: 100%;
+}
+
+#dialogue-cont p {
   position: absolute;
-  }
-#dialogue-text{
-  font-family: "Caribbean Regular";
-  left:17%;
-  animation-delay: 8s
-  animation: textslide 1s;
-  animation-fill-mode: forwards;
-  z-index:70;
-  position: absolute;
-  width:55%;
-  /* margin-left: 17%;  */
-  margin-top:-37%;
+  top: 2vh;
+  margin: 0 auto;
   color: white;
 }
 
