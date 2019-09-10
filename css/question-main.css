@@ -1,60 +1,63 @@
-body {
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
+body{
+  width:100vw;
   height: 100vh;
+  font-family: "Caribbean Regular";
+  overflow: hidden;
 }
+
+.fit { /* set relative picture size */
+      max-width: 100%;
+      max-height: 100%;
+  }
+  .center {
+      display: block;
+      margin: auto;
+  }
 
 #rotate-prompt{
   display: none;
+  flex-direction: column;
   visibility: hidden;
-    width:75%;
-    margin-top:40%;
-    margin-left: 14%;
-    color:white;
-    text-align: center;
+  width:100vw;
+  margin-top:8vh;
+  align-self: center;
+  color:white;
+  text-align: center;
 }
+
+
 #rotate-prompt img{
-  margin-left:-10%;
+  align-self: center;
 }
 
-.container-self p{
-  font-family: "Caribbean Regular";
-}
-
-.container{
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
 #background-image{
+  top:0vh;
+  position: absolute;
   z-index: 2;
   background-size: cover;
-  background-position: center;
   width:100%;
   height:100%;
 }
+
 #map{
-  top:6%;
+  width:85%;
+  top:15vh;
+  left:5vw;
   position:absolute;
   z-index: 100;
 }
+
 #map-close{
   z-index:200;
   position: absolute;
   opacity: 0;
   width: 9%;
   height: 8%;
-  top:20%;
-  left:71%;
+  top:25%;
+  left:65%;
   cursor: pointer;
 }
+
 .btn{
   position: absolute;
   z-index: 150;
@@ -64,76 +67,86 @@ body {
   cursor: pointer;
 }
 
-.btn-map{
+#map-button{
   position: absolute;
   z-index: 125;
-  opacity: 1;
-  width: 12%;
+  width: 15%;
   height: 14%;
   cursor: pointer;
   top:6%;
-  left:84%;
-  opacity:0;
+  left:80%;
+  opacity:0 ;
 }
+
 #character{
-  margin-left: 3%;
-  width:10%;
-  margin-top:-24%;
+  width:15%;
+  top:90%;
+  left:-5%;
   position: absolute;
-  z-index:50;
+  z-index:70;
 }
+
 #my-crew{
   top:49%;
   left: 76%;
 }
+
 #sign-out{
   top:72%;
   left: 76%;
 }
+
 #next{
   position: absolute;
   z-index: 20;
-  opacity: 1;
-  width: 19%;
-  height: 8%;
-  top:69%;
-  left:34%;
+  opacity: 0.8;
+  width: 15%;
+  height: 7%;
+  bottom: 4%;
+  left:35%;
+  margin-bottom: 15px;
   cursor: pointer;
   background-color: #e8d295;
   border: 3px solid #a65733;
-  font-family: sans-serif;
+  font-family: "Caribbean Regular";
   font-size: 15px;
   font-weight: bold;
   color:#361709;
 }
 
-#dialogue-cont {
-  display: block;
-  width: 50vw;
-  height: 50vh;
+#dialogue-cont{
   position: absolute;
-  left: 5vw;
-  bottom: 10vh;
+  z-index:20;
+  left:10%;
+  bottom: 45%;
+  width:65vw;
+  height:40vh;
 }
 
-#dialogue-cont img {
-  width: 100%;
-  height: 100%;
+#dialogue{
+  width:100%;
+  top: 0%;
 }
 
-#dialogue-cont p {
+#dialogue-text{
+  top:25%;
+  left:13%;
+  font-family: "Caribbean Regular";
+  animation-delay: 8s;
+  animation: textslide 1s;
+  animation-fill-mode: forwards;
+  z-index:70;
   position: absolute;
-  top: 2vh;
-  margin: 0 auto;
+  width:80%;
   color: white;
 }
 
 .map-animation{
-  animation: mapmove 2s;
+  animation: mapmove 1s;
   animation-fill-mode: forwards;
 }
 .map-animation-2{
-  animation: mapmove-2 2s ease-out;
+  animation: mapmove-2 1s ease-out;
   animation-fill-mode: forwards ;
 }
 .box-animation{
@@ -153,7 +166,7 @@ body {
   transform: translate(0%,0%) scale(1);
   }
   100%{
-  transform:translate(40%,-42%) scale(0.21);;
+  transform:translate(48%,-53%) scale(0.21);;
   }
 }
 
@@ -181,31 +194,18 @@ body {
     transform: translate(20%);
   }
   }
-@media (max-width: 800px){
-  .container{
-    font-size: 14px;
-  }
-  #next{
-    top:72%;
-  }
-}
-@media (max-width: 700px){
-  .container{
-    font-size: 12px;
-  }
-}
-@media (max-width: 600px){
-  .container{
-    font-size: 11px;
-  }
-}
 
+@media screen and (max-width:641px){
+  body{
+    font-size: 8px;
+  }
+}
 @media (orientation:portrait) {
     .container {
         display: none;
     }
     #rotate-prompt{
-      display: block;
+      display: flex;
       visibility: visible;
     }
     body{
