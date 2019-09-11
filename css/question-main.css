@@ -185,11 +185,190 @@ body{
   }
   }
 
-@media screen and (max-width:641px){
-  body{
-    font-size: 8px;
+@media (aspect-ratio: 4/3) {
+  #character {
+    bottom: 32%;
+    left:-8%;
   }
+
+#map{
+  top: 30vh;
+  left: 13vw;
 }
+#map-close{
+  top:36vh;
+  left: 61vw;
+  height:6%;
+}
+#map-button{
+  top:24%;
+  height:8%;
+  left: 82%;
+}
+#dialogue-cont{
+  top:25vh;
+  left:13%;
+  height:70vh;
+}
+#next{
+  bottom:20%;
+}
+}
+
+@media (aspect-ratio: 3/2) {
+  #character {
+    bottom: 18%;
+    left:-7%;
+    width: 17%;
+    height: auto;
+  }
+
+#map{
+  top: 30vh;
+  left: 13vw;
+}
+#map-close{
+  top:37vh;
+  left: 61vw;
+  height:6%;
+}
+#map-button{
+  top:23%;
+  height:9%;
+  left: 82%;
+}
+#dialogue-cont{
+  top:25vh;
+  left:13%;
+  height:70vh;
+}
+#next{
+  bottom:10%;
+}
+}
+
+@media (aspect-ratio: 16/10) {
+  #character {
+    bottom: 25%;
+    left:-4%;
+  }
+
+#map{
+  top: 30vh;
+  left: 13vw;
+}
+#map-close{
+  top:38vh;
+  left: 61vw;
+  height:6%;
+}
+#map-button{
+  top:22%;
+  height:10%;
+  left: 82%;
+}
+#dialogue-cont{
+  top:22vh;
+  left:11%;
+  height:70vh;
+}
+#next{
+  bottom:8%;
+}
+}
+
+@media (aspect-ratio: 17/10) {
+  #character {
+    bottom: 20%;
+    left:-4%;
+
+}
+#map{
+  top: 30vh;
+  left: 13vw;
+}
+#map-close{
+  top:38vh;
+  left: 61vw;
+  height:6%;
+}
+#map-button{
+  top:22%;
+  height:10%;
+  left: 82%;
+}
+#dialogue-cont{
+  top:20vh;
+  left:11%;
+  height:70vh;
+}
+#next{
+  bottom:5%;
+}
+}
+
+@media (aspect-ratio: 16/9) {
+  #character {
+    bottom:18%;
+    left:-4%;
+  }
+
+#map{
+  top: 25vh;
+  left: 13vw;
+}
+#map-close{
+  top:33vh;
+  left: 61vw;
+  height:6%;
+}
+#map-button{
+  top:17%;
+  height:10%;
+  left: 82%;
+}
+#dialogue-cont{
+  top:18vh;
+  left:11%;
+  height:70vh;
+}
+#next{
+  bottom:2%;
+}
+}
+
+@media (aspect-ratio: 2436/1125) {
+  #character {
+    bottom:0%;
+    left:-3%;
+    width:10%;
+    height:auto;
+  }
+
+#map{
+  top: 15vh;
+  left: 13vw;
+}
+#map-close{
+  top:26vh;
+  left: 61vw;
+  height:6%;
+}
+#map-button{
+  top:4%;
+  height:14%;
+  left: 82%;
+}
+#dialogue-cont{
+  top:10vh;
+  left:11%;
+  height:70vh;
+}
+#next{
+  bottom:-25%;
+}
+}
+
 @media (orientation:portrait) {
     .container {
         display: none;
